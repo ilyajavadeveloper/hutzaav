@@ -5,34 +5,25 @@ import React from "react";
 // Основные секции сайта
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
-import AboutSection from "./components/AboutSection";
-import GallerySection from "./components/GallerySection";
-import ServicesSection from "./components/ServicesSection";
+import AboutSection from "./components/AboutSection";;
+
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
+import AtelierSection from "./components/AtelierSection";
+import ClothingSection from "./components/ClothingSection";
+import PaintingSection from "./components/PaintingSection";
 
 function App() {
   return (
     <>
-      {/* Навигация */}
-      <Navbar />
-
-      {/* Главная секция с баннером */}
+ <Navbar />
       <HeroSection />
-
-      {/* Описание студии */}
       <AboutSection />
-
-      {/* Галерея работ */}
-      <GallerySection />
-
-      {/* Услуги */}
-      <ServicesSection />
-
-      {/* Контактная форма + WhatsApp */}
+      <AtelierSection />
+      <ClothingSection />
+      <PaintingSection /> {/* ← добавляем сюда */}
+  
       <ContactSection />
-
-      {/* Футер */}
       <Footer />
     </>
   );

@@ -1,32 +1,38 @@
 {
   "nav_home": "Home",
   "nav_about": "About",
-  "nav_gallery": "Gallery",
-  "nav_services": "Services",
+  "nav_atelier": "Atelier",
+  "nav_clothing": "Clothing",
+  "nav_painting": "Prints",
   "nav_contact": "Contact",
+
   "hero_title": "Design. Quality. Attention to detail.",
-  "hero_subtitle": "In our studio, every garment has a soul",
+  "hero_subtitle": "In our studio, every garment has a soul.",
   "hero_cta": "Contact Us",
+
   "about_title": "About the Studio",
-  "about_text": "We create custom clothing with attention to every detail. Personal approach, quality fabrics and soul in every stitch",
-  "gallery_title": "Gallery",
-  "services_title": "Our Services",
-  "services_sewing": "Custom Clothing",
-  "services_repair": "Alterations and Repairs",
-  "services_textile": "Home Textiles",
+"about_text": "A family studio specializing in custom tailoring, with over 20 years of experience. We focus on quality, personal service, and attention to every detail to make each garment a work of art.",
+
   "contact_title": "Get in Touch",
-  "contact_subtitle": "We’d love to hear about your project",
+  "contact_subtitle": "We’d love to hear about your project.",
+  "contact_alt_text": "Or contact us directly:",
+
   "form_name": "Your Name",
   "form_email": "Email Address",
   "form_message": "Message",
   "form_send": "Send",
+
   "services_title": "Our Services",
   "services_tailoring": "Custom Tailoring",
-  "services_tailoring_desc": "Garments made to fit your measurements and personal style",
+  "services_tailoring_desc": "Garments made to fit your measurements and personal style.",
   "services_evening_dresses": "Evening Dresses",
-  "services_evening_dresses_desc": "Elegant dresses designed and sewn for special occasions",
+  "services_evening_dresses_desc": "Elegant dresses designed and sewn for special occasions.",
   "services_repairs": "Alterations and Repairs",
-  "services_repairs_desc": "Shortening, lengthening, zipper fixes, and more upgrades",
+  "services_repairs_desc": "Shortening, lengthening, zipper fixes, and other adjustments.",
   "services_home_decor": "Home Decor",
-  "services_home_decor_desc": "Curtains, pillows, tablecloths and custom textiles for your home"
+  "services_home_decor_desc": "Curtains, pillows, tablecloths and custom textiles for your home.",
+
+  "atelier_title": "Inside the Atelier",
+  "clothing_title": "Clothing Collection",
+  "painting_title": "Fabric Prints"
 }

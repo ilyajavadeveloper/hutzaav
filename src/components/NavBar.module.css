@@ -1,128 +1,122 @@
+/* NavBar.module.css */
+
 .navbar {
-    width: 100%;
-    padding: 1rem 2rem;
-    background: #fff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .logo {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #111;
-  }
-  
-  .links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-    align-items: center;
-    transition: all 0.3s ease;
-  }
-  
-  .links li a {
-    text-decoration: none;
-    color: #111;
-    font-weight: 500;
-    position: relative;
-  }
-  
-  .links li a::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: #111;
-    transition: 0.3s ease;
-  }
-  
-  .links li a:hover::after {
-    width: 100%;
-  }
-  
-  .langSwitch {
-    display: flex;
-    gap: 0.4rem;
-    margin-left: 1rem;
-  }
-  
-  .langSwitch button {
-    background: none;
-    border: 1px solid #111;
-    padding: 4px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.8rem;
-    transition: all 0.3s ease;
-  }
-  
-  .langSwitch button:hover {
-    background: #111;
-    color: #fff;
-  }
-  
-  /* ===== Бургер ===== */
-  .burger {
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111;
+  text-decoration: none;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li a {
+  color: #111;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navLinks li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background-color: #111;
+  transition: width 0.3s ease;
+}
+
+.navLinks li a:hover::after {
+  width: 100%;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: #111;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.langSwitch {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.langSwitch button {
+  background: none;
+  border: 1px solid #111;
+  color: #111;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.langSwitch button:hover {
+  background-color: #111;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .navLinks {
     display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
     flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
+    gap: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   }
-  
-  .burger span {
-    width: 25px;
-    height: 2px;
-    background: #111;
-    transition: all 0.3s ease;
+
+  .showMenu {
+    display: flex;
   }
-  
-  .open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+
+  .burger {
+    display: flex;
   }
-  
-  .open span:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .open span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-  
-  /* ===== Адаптив ===== */
-  @media (max-width: 768px) {
-    .burger {
-      display: flex;
-    }
-  
-    .links {
-      position: absolute;
-      top: 70px;
-      right: 0;
-      width: 100%;
-      flex-direction: column;
-      background: #fff;
-      padding: 1rem 0;
-      transform: translateY(-100%);
-      opacity: 0;
-      pointer-events: none;
-    }
-  
-    .show {
-      transform: translateY(0);
-      opacity: 1;
-      pointer-events: all;
-    }
-  
-    .langSwitch {
-      justify-content: center;
-      margin-top: 1rem;
-    }
-  }
-  
+}

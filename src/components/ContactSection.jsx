@@ -8,7 +8,7 @@ export default function ContactSection() {
   return (
     <section id="contact" className={styles.contact}>
       <h2 className={styles.title}>{t("contact_title")}</h2>
-      <p className={styles.subtext}>{t("contact_subtext")}</p>
+
 
       <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
         <input type="text" placeholder={t("form_name")} required />
