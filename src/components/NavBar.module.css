@@ -1,0 +1,128 @@
+.navbar {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #111;
+  }
+  
+  .links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  
+  .links li a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    position: relative;
+  }
+  
+  .links li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #111;
+    transition: 0.3s ease;
+  }
+  
+  .links li a:hover::after {
+    width: 100%;
+  }
+  
+  .langSwitch {
+    display: flex;
+    gap: 0.4rem;
+    margin-left: 1rem;
+  }
+  
+  .langSwitch button {
+    background: none;
+    border: 1px solid #111;
+    padding: 4px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+  }
+  
+  .langSwitch button:hover {
+    background: #111;
+    color: #fff;
+  }
+  
+  /* ===== Бургер ===== */
+  .burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .burger span {
+    width: 25px;
+    height: 2px;
+    background: #111;
+    transition: all 0.3s ease;
+  }
+  
+  .open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* ===== Адаптив ===== */
+  @media (max-width: 768px) {
+    .burger {
+      display: flex;
+    }
+  
+    .links {
+      position: absolute;
+      top: 70px;
+      right: 0;
+      width: 100%;
+      flex-direction: column;
+      background: #fff;
+      padding: 1rem 0;
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+    }
+  
+    .show {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: all;
+    }
+  
+    .langSwitch {
+      justify-content: center;
+      margin-top: 1rem;
+    }
+  }
+  
