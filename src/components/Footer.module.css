@@ -35,6 +35,10 @@
   transform: translateY(-2px);
 }
 
+a svg {
+  color: #d1922e;
+}
+
 @media (min-width: 768px) {
   .links {
     flex-direction: row;
@@ -51,8 +55,4 @@
   .links {
     gap: 1.5rem;
   }
-}
-
-a svg {
-  color: #d1922e;
 }

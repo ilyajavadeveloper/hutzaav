@@ -21,8 +21,7 @@ export default function Footer() {
           <a
             href="https://www.instagram.com/hutzahav"
             target="_blank"
-            rel="noreferrer"
-            aria-label="Instagram"
+            rel="noopener noreferrer"
           >
             <Instagram size={18} /> אינסטגרם
           </a>
@@ -30,8 +29,7 @@ export default function Footer() {
           <a
             href="https://www.facebook.com/hutzahav"
             target="_blank"
-            rel="noreferrer"
-            aria-label="Facebook"
+            rel="noopener noreferrer"
           >
             <Facebook size={18} /> פייסבוק
           </a>
@@ -39,20 +37,23 @@ export default function Footer() {
           <a
             href="https://wa.me/972585877708"
             target="_blank"
-            rel="noreferrer"
-            aria-label="WhatsApp"
+            rel="noopener noreferrer"
           >
             <Phone size={18} /> WhatsApp: 058-587-7708
           </a>
 
-          <a href="mailto:Hutzahav@gmail.com">
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=Hutzahav@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Mail size={18} /> Hutzahav@gmail.com
           </a>
 
           <a
             href="https://maps.google.com/?q=Shavei Tzion 2, Ashdod"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             <MapPin size={18} /> Shavei Tzion 2, Ashdod
           </a>
@@ -60,8 +61,7 @@ export default function Footer() {
           <a
             href="https://hutzahav.com"
             target="_blank"
-            rel="noreferrer"
-            aria-label="Website"
+            rel="noopener noreferrer"
           >
             <Globe size={18} /> www.hutzahav.com
           </a>
