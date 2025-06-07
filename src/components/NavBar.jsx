@@ -11,8 +11,25 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.left}>
-        <a href="#home" className={styles.logo}>
-          HUTZAAV STUDIO
+        <ul className={`${styles.navLinks} ${isMobileOpen ? styles.showMenu : ""}`}>
+          <li><a href="#home">{t("nav_home")}</a></li>
+          <li><a href="#about">{t("nav_about")}</a></li>
+          <li><a href="#atelier">{t("atelier_title")}</a></li>
+          <li><a href="#clothing">{t("clothing_title")}</a></li>
+          <li><a href="#painting">{t("painting_title")}</a></li>
+          <li><a href="#contact">{t("nav_contact")}</a></li>
+          <li className={styles.mobileLangs}>
+            <button onClick={() => changeLanguage("he")}>עב</button>
+            <button onClick={() => changeLanguage("ru")}>RU</button>
+            <button onClick={() => changeLanguage("en")}>EN</button>
+          </li>
+        </ul>
+      </div>
+
+      <div className={styles.logoBox}>
+        <a href="#home" className={styles.logoLink}>
+          <img src="/logo.jpg" alt="Logo" className={styles.logoImg} />
+          <span className={styles.logoText}>HUTZAAV</span>
         </a>
       </div>
 
@@ -23,23 +40,6 @@ export default function Navbar() {
         <span />
         <span />
         <span />
-      </div>
-
-      <ul className={`${styles.navLinks} ${isMobileOpen ? styles.showMenu : ""}`}>
-        <li><a href="#about">{t("nav_about")}</a></li>
-        <li><a href="#atelier">{t("atelier_title")}</a></li>
-        <li><a href="#clothing">{t("clothing_title")}</a></li>
-        <li><a href="#painting">{t("painting_title")}</a></li>
-        <li><a href="#contact">{t("nav_contact")}</a></li>
-      </ul>
-
-      <div className={styles.right}>
-        <div className={styles.phone}>+972 58 587 7708</div>
-        <div className={styles.langSwitch}>
-          <button onClick={() => changeLanguage("he")}>עב</button>
-          <button onClick={() => changeLanguage("ru")}>RU</button>
-          <button onClick={() => changeLanguage("en")}>EN</button>
-        </div>
       </div>
     </nav>
   );

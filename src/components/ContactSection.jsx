@@ -24,29 +24,15 @@ export default function ContactSection() {
           <FaEnvelope /> Hutzahav@gmail.com
         </a>
 
-        <a href="https://wa.me/972585877708" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://wa.me/972585877708"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaWhatsapp /> WhatsApp: 058-587-7708
         </a>
 
-        <a href="https://www.facebook.com/hutzahav" target="_blank" rel="noopener noreferrer">
-          <FaFacebookF /> Facebook עמוד עסקי
-        </a>
-
-        <a
-          href="https://www.facebook.com/photo/?fbid=8095191097171078&set=pob.100000408058534"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaFacebookF /> Facebook — גלריה
-        </a>
-
-        <a
-          href="https://www.instagram.com/hutzahav"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaInstagram /> Instagram @hutzahav
-        </a>
+  
       </div>
     </section>
   );

@@ -17,11 +17,12 @@ function App() {
  <Navbar />
       <HeroSection />
       {/* <AboutSection /> */}
-      <AtelierSection />
+      {/* <AtelierSection /> */}
       <ClothingSection />
       <PaintingSection /> {/* ← добавляем сюда */}
   
       <ContactSection />
+      <Footer/>
 
     </>
   );

@@ -8,10 +8,8 @@ export default function HeroSection() {
 
   return (
     <section className={styles.hero} id="home">
-      <div className={styles.left}>
-        <img src="/clothing11.jpg" alt="Work 1" className={styles.heroImage} />
-        <img src="/gallery1.jpg" alt="Work 2" className={styles.heroImage} />
-        <img src="/clothing1.jpg" alt="Work 3" className={styles.heroImage} />
+      <div className={styles.imageWrapper}>
+        <img src="/clothing11.jpg" alt="Main Visual" className={styles.heroImage} />
       </div>
 
       <div className={styles.right}>

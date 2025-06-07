@@ -7,6 +7,7 @@ const paintings = [
   "/paint3.jpg",
   "/paint4.jpg",
   "/paint9.jpg",
+'/paint10.jpg',
   "/paint11.jpg",
   "/paint16.jpg",
   "/paint17.jpg",

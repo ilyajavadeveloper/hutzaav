@@ -6,109 +6,91 @@
 
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   background: var(--clr-bg);
-  padding: 1.2rem 3rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 1.2rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-/* Левый блок */
 .left {
+  flex: 1;
   display: flex;
   align-items: center;
 }
 
-.logo {
+.logoBox {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+}
+
+.logoImg {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.logoText {
   font-family: "Anton", sans-serif;
   font-size: 1.9rem;
   color: var(--clr-accent);
-  text-decoration: none;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-}
-.logo:hover {
-  opacity: 0.8;
-  transform: scale(1.03);
+  transition: transform 0.3s ease;
 }
 
-/* Центр: навигация */
+.logoBox:hover .logoImg,
+.logoBox:hover .logoText {
+  transform: scale(1.05);
+}
+
 .navLinks {
   display: flex;
-  gap: 2rem;
   list-style: none;
+  gap: 2rem;
 }
+
 .navLinks li a {
+  text-decoration: none;
+  color: var(--clr-text);
   font-weight: 500;
   font-size: 1rem;
-  color: var(--clr-text);
-  text-decoration: none;
   position: relative;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
+
 .navLinks li a::after {
   content: "";
   position: absolute;
-  left: 0;
   bottom: -4px;
+  left: 0;
   width: 0;
   height: 2px;
   background-color: var(--clr-accent);
   transition: width 0.3s ease;
 }
+
 .navLinks li a:hover {
   color: var(--clr-accent);
 }
+
 .navLinks li a:hover::after {
   width: 100%;
-}
-
-/* Правый блок */
-.right {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-.phone {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: var(--clr-text);
-  text-align: right;
-  direction: ltr;
-  transition: color 0.3s, transform 0.3s;
-}
-.phone:hover {
-  color: var(--clr-accent);
-  transform: scale(1.05);
-}
-
-/* Языки */
-.langSwitch {
-  display: flex;
-  gap: 0.5rem;
-}
-.langSwitch button {
-  border: none;
-  background: transparent;
-  color: var(--clr-text);
-  font-weight: 500;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-.langSwitch button:hover {
-  color: var(--clr-accent);
 }
 
 /* Бургер */
 .burger {
   display: none;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
   cursor: pointer;
 }
+
 .burger span {
   width: 26px;
   height: 3px;
@@ -116,38 +98,149 @@
   border-radius: 2px;
   transition: all 0.3s ease;
 }
+
 .burger.open span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
+
 .burger.open span:nth-child(2) {
   opacity: 0;
 }
+
 .burger.open span:nth-child(3) {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Мобилка */
+.mobileLangs {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.mobileLangs button {
+  border: 1px solid var(--clr-text);
+  background: transparent;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  color: var(--clr-text);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.mobileLangs button:hover {
+  background-color: var(--clr-accent);
+  color: white;
+}
+
+/* Адаптив */
 @media (max-width: 768px) {
   .burger {
     display: flex;
-    position: absolute;
-    right: 2rem;
-    top: 1.5rem;
   }
 
   .navLinks {
     display: none;
     position: absolute;
-    top: 72px;
+    top: 70px;
     left: 0;
     width: 100%;
     background: var(--clr-bg);
     flex-direction: column;
-    padding: 1.5rem 2rem;
+    align-items: center;
+    padding: 1.5rem 0;
     gap: 1rem;
+    z-index: 999;
   }
 
   .showMenu {
+    display: flex;
+  }
+
+  .navLinks li {
+    text-align: center;
+  }
+
+  .logoText {
+    font-size: 1.4rem;
+  }
+
+  .logoImg {
+    height: 32px;
+    width: 32px;
+  }
+
+  .mobileLangs {
+    display: flex;
+  }
+}
+.logoBox {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.logoImg {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.logoText {
+  font-family: "Anton", sans-serif;
+  font-size: 1.9rem;
+  color: var(--clr-accent);
+  transition: transform 0.3s ease;
+}
+
+.logoLink:hover .logoImg,
+.logoLink:hover .logoText {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .logoText {
+    font-size: 1.4rem;
+  }
+
+  .logoImg {
+    height: 32px;
+    width: 32px;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--clr-bg);
+    padding: 1.5rem 0;
+    gap: 1rem;
+    display: none;
+    z-index: 999;
+    align-items: center;
+  }
+
+  .showMenu {
+    display: flex;
+  }
+
+  .burger {
+    position: absolute;
+    right: 2rem;
+    top: 1.5rem;
     display: flex;
   }
 }
