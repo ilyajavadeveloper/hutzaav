@@ -2,23 +2,21 @@
 
 import React from "react";
 
-// Основные секции сайта
-import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
-import AboutSection from "./components/AboutSection";;
 
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import AtelierSection from "./components/AtelierSection";
 import ClothingSection from "./components/ClothingSection";
 import PaintingSection from "./components/PaintingSection";
+import Navbar from "./components/NavBar";
 
 function App() {
   return (
     <>
  <Navbar />
       <HeroSection />
-      <AboutSection />
+      {/* <AboutSection /> */}
       <AtelierSection />
       <ClothingSection />
       <PaintingSection /> {/* ← добавляем сюда */}

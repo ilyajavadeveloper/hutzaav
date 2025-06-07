@@ -3,14 +3,9 @@ import { useTranslation } from "react-i18next";
 import styles from "./AtelierSection.module.css";
 
 const atelierImages = [
-  "/atelier1.jpg",
-  "/atelier2.jpg",
-  "/atelier3.jpg",
-  "/atelier5.jpg",
-  "/atelier7.jpg",
-"/gallery1.jpg",
-"/gallery9.jpg",
-  "/atelier9.jpg"
+  "/gallery4.jpg",
+  "/clothing13.jpg",
+  "/clothing3.jpg"
 ];
 
 export default function AtelierSection() {

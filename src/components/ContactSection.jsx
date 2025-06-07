@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import styles from "./ContactSection.module.css";
+import { FaFacebookF, FaWhatsapp, FaInstagram, FaEnvelope } from "react-icons/fa";
 
 export default function ContactSection() {
   const { t } = useTranslation();
@@ -8,7 +9,6 @@ export default function ContactSection() {
   return (
     <section id="contact" className={styles.contact}>
       <h2 className={styles.title}>{t("contact_title")}</h2>
-
 
       <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
         <input type="text" placeholder={t("form_name")} required />
@@ -19,13 +19,33 @@ export default function ContactSection() {
 
       <div className={styles.contactInfo}>
         <p>{t("contact_alt_text")}</p>
-        <a href="mailto:Hutzahav@gmail.com">Hutzahav@gmail.com</a>
+
+        <a href="mailto:Hutzahav@gmail.com">
+          <FaEnvelope /> Hutzahav@gmail.com
+        </a>
+
+        <a href="https://wa.me/972585877708" target="_blank" rel="noopener noreferrer">
+          <FaWhatsapp /> WhatsApp: 058-587-7708
+        </a>
+
+        <a href="https://www.facebook.com/hutzahav" target="_blank" rel="noopener noreferrer">
+          <FaFacebookF /> Facebook עמוד עסקי
+        </a>
+
         <a
-          href="https://wa.me/972585877708"
+          href="https://www.facebook.com/photo/?fbid=8095191097171078&set=pob.100000408058534"
           target="_blank"
           rel="noopener noreferrer"
         >
-          WhatsApp: 058-587-7708 📱
+          <FaFacebookF /> Facebook — גלריה
+        </a>
+
+        <a
+          href="https://www.instagram.com/hutzahav"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaInstagram /> Instagram @hutzahav
         </a>
       </div>
     </section>

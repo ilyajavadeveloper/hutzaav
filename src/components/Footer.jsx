@@ -1,16 +1,25 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import { Instagram, Phone, Mail, MapPin } from "lucide-react";
+import {
+  Instagram,
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Globe,
+} from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.content}>
-        <p>© {new Date().getFullYear()} HUTZAAV — כל הזכויות שמורות</p>
+        <p className={styles.copyright}>
+          © {new Date().getFullYear()} HUTZAAV — כל הזכויות שמורות
+        </p>
 
         <div className={styles.links}>
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/hutzahav"
             target="_blank"
             rel="noreferrer"
             aria-label="Instagram"
@@ -19,12 +28,21 @@ export default function Footer() {
           </a>
 
           <a
+            href="https://www.facebook.com/hutzahav"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Facebook"
+          >
+            <Facebook size={18} /> פייסבוק
+          </a>
+
+          <a
             href="https://wa.me/972585877708"
             target="_blank"
             rel="noreferrer"
             aria-label="WhatsApp"
           >
-            <Phone size={18} /> 058-587-7708
+            <Phone size={18} /> WhatsApp: 058-587-7708
           </a>
 
           <a href="mailto:Hutzahav@gmail.com">
@@ -37,6 +55,15 @@ export default function Footer() {
             rel="noreferrer"
           >
             <MapPin size={18} /> Shavei Tzion 2, Ashdod
+          </a>
+
+          <a
+            href="https://hutzahav.com"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Website"
+          >
+            <Globe size={18} /> www.hutzahav.com
           </a>
         </div>
       </div>

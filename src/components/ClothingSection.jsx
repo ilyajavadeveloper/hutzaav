@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import styles from "./ClothingSection.module.css";
 
 const images = [
-    "/clothing1.jpg",
+  "/clothing1.jpg",
   "/clothing3.jpg",
   "/clothing4.jpg",
   "/clothing8.jpg",
@@ -14,9 +14,7 @@ const images = [
   "/clothing14.jpg",
   "/clothing15.jpg",
   "/clothing16.jpg",
-
   "/clothing18.jpg",
-
 ];
 
 export default function ClothingSection() {
