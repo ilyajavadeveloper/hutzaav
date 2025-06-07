@@ -29,7 +29,7 @@ export default function Navbar() {
       <div className={styles.logoBox}>
         <a href="#home" className={styles.logoLink}>
           <img src="/logo.jpg" alt="Logo" className={styles.logoImg} />
-          <span className={styles.logoText}>HUTZAAV</span>
+          <span className={styles.logoText}>HUTZHAAV</span>
         </a>
       </div>
 
